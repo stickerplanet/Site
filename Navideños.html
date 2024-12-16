@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Stickers</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Cabecera -->
+    <header class="d-flex justify-content-between align-items-center p-3 bg-dark">
+        <div class="logo d-flex align-items-center">
+            <img src="Imagenes/Logos/Logo.jpg" alt="Logo de la empresa" class="me-2" width="50">
+            <h1 class="h4 mb-0 text-white">Sticker Planet</h1>
+        </div>
+        <nav>
+            <a href="#contacto" class="text-white text-decoration-none">
+                <i class="fa-solid fa-envelope"></i> Contacto
+            </a>
+        </nav>
+    </header>
+    
+
+    <!-- Sección de productos -->
+    <section id="productos" class="container my-5 text-center">
+        <h2 class="mb-4">Navideños</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <!-- Lista de productos -->
+            <script>
+                const categorias = [
+                    { nombre: 'Personajes Navideños', imagen: 'Imagenes/Categorias/Navideños/Personajes Navideños.jpg', url: '#' },
+                    { nombre: 'Mensajes', imagen: 'Imagenes/Categorias/Navideños/Mensajes.jpg', url: '#' },
+                    { nombre: 'Decoraciones', imagen: 'Imagenes/Categorias/Navideños/Decoraciones.jpg', url: '#' },
+                    { nombre: 'Accesorios', imagen: 'Imagenes/Categorias/Navideños/Accesorios.jpg', url: '#' },
+
+                 
+                ];
+
+                document.write(
+                    categorias.map(cat => `
+                        <div class="col">
+                            <a href="${cat.url}" class="text-decoration-none">
+                                <div class="product-item border rounded overflow-hidden shadow-sm">
+                                    <img src="${cat.imagen}" alt="${cat.nombre}" class="w-100">
+                                    <div class="p-3 bg-white">
+                                        <h3 class="h5 text-dark mb-0">${cat.nombre}</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>`
+                    ).join('')
+                );
+            </script>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-section about">
+            <h3>Sobre Nosotros</h3>
+            <p>Descripción breve sobre la empresa, misión, visión o cualquier información relevante.</p>
+          </div>
+          
+          <div class="footer-section links">
+            <h3>Enlaces</h3>
+            <ul>
+              <li><a href="/home">Inicio</a></li>
+              <li><a href="/menu">Menú</a></li>
+              <li><a href="/contact">Contacto</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-section social">
+            <h3>Redes Sociales</h3>
+            <div class="social-links">
+              <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+              <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+              <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
+        </div>
+      </footer>
+    
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+    <a href="https://wa.me/541123053319" target="_blank" class="whatsapp-button">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+</html>
